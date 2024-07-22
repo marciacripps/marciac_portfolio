@@ -32,6 +32,13 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+/* Uniform image sizes for the portfolio section */
+#portfolio .box .image.featured img {
+    width: 100%;
+    height: 200px; /* Adjust this value to your preference */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
 
 ol, ul {
 	list-style: none;
