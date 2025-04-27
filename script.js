@@ -34,21 +34,40 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // Contact Form
 const contactForm = document.getElementById('contact-form');
 
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
   
-  // Get form data
-  const formData = new FormData(contactForm);
-  const data = Object.fromEntries(formData);
-  
-  // Simulate form submission
-  console.log('Form submitted:', data);
-  
-  // Show success message
-  alert('Message sent successfully!');
-  
-  // Reset form
-  contactForm.reset();
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      console.log('Form submission started');
+      
+      // Log form data
+      const formData = new FormData(form);
+      const formDataObj = {};
+      formData.forEach((value, key) => {
+        formDataObj[key] = value;
+      });
+      console.log('Form data to be submitted:', formDataObj);
+      
+      // Check if form-name is present
+      if (!formDataObj['form-name']) {
+        console.error('form-name is missing from form data');
+      }
+      
+      // Check if Netlify form detection is working
+      if (!form.hasAttribute('data-netlify')) {
+        console.error('data-netlify attribute is missing');
+      }
+      
+      // Log the form's action URL
+      console.log('Form action URL:', form.action);
+      
+      // Log the form's method
+      console.log('Form method:', form.method);
+    });
+  } else {
+    console.error('Contact form not found in the document');
+  }
 });
 
 // Intersection Observer for animations
