@@ -1,228 +1,240 @@
-<!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license) hello
--->
-<html>
-	<head>
-		<title>Marcia Cripps - Full-Stack Developer</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcia Cripps | Full Stack Software Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Marcia<span>Cripps</span></div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+      <button id="mobile-menu" aria-label="Menu">☰</button>
+    </nav>
+  </header>
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">About Me</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<!-- <li><a href="#blog">Blog</a></li> -->
-				</ul>
-			</nav>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Hi, I'm <span>Marcia Cripps</span></h1>
+        <h2>Full Stack Software Engineer</h2>
+        <p>I craft beautiful, functional websites that deliver exceptional user experiences.</p>
+        <div class="cta-buttons">
+          <a href="#contact" class="primary-btn">Resume</a>
+          <a href="#projects" class="secondary-btn">View Projects</a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github" style="font-size: 24px;" aria-hidden="true"></i>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin" style="font-size: 24px;" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:email@example.com" aria-label="Email">
+            <i class="fa-solid fa-envelope" style="font-size: 24px;" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="src/img/female_coder.jpg" alt="Marcia Cripps">
+      </div>
+    </section>
 
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/hello-world-icon-free-vector.jpeg" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>Hi. I'm <strong>Marcia Cripps</strong>.</h1>
-								<ul class="social">
-									<li><a href="https://twitter.com/marciac95_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.linkedin.com/in/marcia-c-54972174/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/marciacripps" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								</ul>
-							</header>
-							<p>And I am a full-stack software engineer. I am seeking full-time and freelance opportunities. Please take a look around, see what I've been up to, and let's see what we can build together.</p>
-						
-							<a href="assets/MCRIPPSSWE24.pdf" class="button large scrolly">My Resume</a>
-						</div>
-					</div>
-				</div>
-			</article>
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-python" style="font-size: 32px;"></i>
+          <h3>Python</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-database" style="font-size: 32px;"></i>
+          <h3>PostgreSQL</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-python" style="font-size: 32px;"></i>
+          <h3>Django</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-chart-line" style="font-size: 32px;"></i>
+          <h3>Pandas</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-react" style="font-size: 32px;"></i>
+          <h3>React</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-chart-bar" style="font-size: 32px;"></i>
+          <h3>Data Analysis</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-github" style="font-size: 32px;"></i>
+          <h3>Git/GitHub</h3>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-code" style="font-size: 32px;"></i>
+          <h3>API Development</h3>
+        </div>
+      </div>
+    </section>
 
-		<!-- Work -->
-			<article id="work" class="wrapper style2">
-				<div class="container">
-					<header>
-						<h2>How may I help you?</h2>
-						<p>I have a background in agriculture and tech</p>
-					</header>
-					<div class="row aln-center">
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-window-maximize"></span>
-								<h3>Website Building</h3>
-								<h5> Netlify, Vercel, Render, Django, Flask, React.js, Vue, Wordpress, Squarespace </h5>
-								<p>I build responsive websites for education, people, businesses, and nonprofits.</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-solid fa-database"></span>
-								<h3>Data Science</h3>
-								<h5>Python, PostGreSQL, MySQL, Supabase, Pandas, Numpy, SQLAlchemy</h5>
-								<p>I specialize in working with data sets to help businesses make confident decisions.</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-solid fa-laptop-code"></span>
-								<h3>Automation, ML/AI, Webscraping</h3>
-								<h5>Azure, AWS, Lambda Functions, API creation, Beautiful Soup</h5>
-								<p>I specialize in automating tasks for small to large businesses using A.I. and ML where appropriate.</p>
-							</section>
-						</div>
-					</div>
-					<footer>
-						<a href="#portfolio" class="button large scrolly">See some of my recent work</a>
-					</footer>
-				</div>
-			</article>
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="src/img/base64decoder.jpg" alt="Base64Decoder">
+          <h3>Base64Decoder</h3>
+          <p>A powerful utility tool for encoding and decoding Base64 strings, built with modern web technologies including Vue.js and TailwindCSS, with serverless backend powered by AWS Lambda and API Gateway.</p>
+          <div class="project-links">
+            <a href="https://base64decoder.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com/marciacripps/base64decoder" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="src/img/pesticide_dashboard.jpg" alt="Pesticide Sales Dashboard">
+          <h3>Pesticide Sales Dashboard</h3>
+          <p>An agricultural analytics platform that processes and visualizes pesticide sales data, featuring interactive Tableau dashboards and a Python/Flask backend for data processing and API endpoints.</p>
+          <div class="project-links">
+            <a href="https://pesticide-dashboard.fly.dev/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com/marciacripps/pesticide-dashboard" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="src/img/shopify_enhancer.jpg" alt="Shopify HTML Enhancer">
+          <h3>Shopify HTML Enhancer</h3>
+          <p>A specialized tool for Shopify merchants that automatically enhances blog post formatting, improving readability and SEO through intelligent HTML processing and styling.</p>
+          <div class="project-links">
+            <a href="https://shopify-html-enhancer.onrender.com/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com/marciacripps/shopify-html-enhancer" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="src/img/ag_converter.jpg" alt="Ag Chemical Rate Converter">
+          <h3>Ag Chemical Rate Converter</h3>
+          <p>A precision agriculture tool that helps farmers and agronomists convert chemical application rates between different units, ensuring accurate and safe pesticide applications.</p>
+          <div class="project-links">
+            <a href="https://ag-chemical-converter.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com/marciacripps/ag-chemical-converter" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="src/img/horse_generator.jpg" alt="Horse Generator">
+          <h3>Horse Generator</h3>
+          <p>An interactive web application that generates detailed horse breed information, combining educational content with engaging user experience through API integration and responsive design.</p>
+          <div class="project-links">
+            <a href="https://horse-generator.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com/marciacripps/horse-generator" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="src/img/holloway_ag.jpg" alt="Holloway Ag">
+          <h3>Holloway Ag</h3>
+          <p>A comprehensive agricultural business website built with WordPress, featuring custom plugins and optimized content management for agricultural consulting and services.</p>
+          <div class="project-links">
+            <a href="https://hollowayag.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com/marciacripps/holloway-ag" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- Portfolio -->
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>Here are a few of my latest projects.</h2>
-						<p>I invite you to explore them.</p>
-					</header>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://marciabase64decoder.netlify.app/" class="image featured"><img src="images/base64decoder.png" alt="Base64Decoder" /></a>
-								<h3><a href="https://marciabase64decoder.netlify.app/">Base64Decoder</a></h3>
-								<h4><a href="https://github.com/marciacripps/aws_lambda_base64_decoder">View Code</a></h4>
-								<p>Made with AWS Lambda, API Gateway, Vue.js, TailwindCSS, Netlify</p>
-								
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://pesticide-sales-analysis.fly.dev/" class="image featured"><img src="images/pesticide_sales_dash.png" alt="" /></a>
-								<h3><a href="https://pesticide-sales-analysis.fly.dev/">Pesticide Sales Dashboard</h3>
-								<h4><a href="https://github.com/marciacripps/pesticide_sales_analysis">View Code</a></h4>
-								<p>Built with Python, Flask, Tableau, SQL, Deployed on Fly.io</p>
-							</article> 
-						</div> 
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://shopify-blog-hyperlink-ehancer.onrender.com/" class="image featured"><img src="images/shopify html.png" alt="" /></a>
-								<h3><a href="https://shopify-blog-hyperlink-ehancer.onrender.com/">Shopify HTML Enhancer</a></h3>
-								<h4><a href="https://github.com/marciacripps/shopify_blog_hyperlink_ehancer">View Code</a></h4>
-								<p>Built with Python, Flask, Render for Shopify Blog Businesses</p>
-							</article>
-						</div> 
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://chemicalconverter1.netlify.app/" class="image featured"><img src="images/chemicalconverter.jpg" alt="" /></a>
-								<h3><a href="https://chemicalconverter1.netlify.app/">Ag Chemical Rate Converter</a></h3>
-								<p>Made with JavaScript, HTML, CSS, Netlify</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://marciahorsegen.netlify.app/" class="image featured"><img src="images/horsegen.jpg" alt="HorseBreeds" /></a>
-								<h3><a href="https://marciahorsegen.netlify.app/">Horse Generator</a></h3>
-								<h4><a href="https://github.com/marciacripps/horse_generator">View Code</a></h4>
-								<p>Made with JavaScript, HTML, CSS, and API, Netlify</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://hollowayag.com/" class="image featured"><img src="images/holloway ag.png" alt=""/></a>
-								<h3><a href="https://hollowayag.com/">Holloway Ag</a></h3>
-								<p>Built with Wordpress and Wordpress Plugins for Blog Business Site</p>
-							</article>
-						</div>
-					</div>
-					<footer>
-						<p>Ready to work together?</p>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
-					</footer>
-				</div>
-			</article>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Hello! I'm Marcia, a passionate web developer with a focus on backend technologies. With over 5 years of experience in Python, Django, and database management, I create robust and scalable web applications.</p>
+          <p>My expertise includes:</p>
+          <ul>
+            <li>Backend Development with Python & Django</li>
+            <li>Database Design with PostgreSQL</li>
+            <li>Data Analysis using Pandas</li>
+            <li>API Development</li>
+            <li>Version Control with Git</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Working on a project">
+        </div>
+      </div>
+    </section>
 
-		<!-- Contact -->
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>Let's Connect!</h2>
-						<p>I am currently open to work and can be contacted directly at marciacripps@gmail.com</p>
-					</header>
-					<div class="row">
-						<div class="col-12">
-							<form method="post" action="https://getform.io/f/e9463f0f-f1af-4c25-a02e-b0ae612f39a6">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="col-12">
-							<hr />
-							<h3>Find me on ...</h3>
-							<ul class="social">
-								<li><a href="https://twitter.com/marciac95_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://www.linkedin.com/in/marcia-c-54972174/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://github.com/marciacripps" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<!--
-								<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
-								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
-								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
-								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
-								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
-								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
-								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
-								-->
-							</ul>
-							<hr />
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Marcia Cripps </li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</div>
-			</article>
+    <section id="contact">
+      <h2>Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope" style="font-size: 24px;"></i>
+            <p>marciacripps@gmail.com</p>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone" style="font-size: 24px;"></i>
+            <p>(123) 456-7890</p>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot" style="font-size: 24px;"></i>
+            <p>South West Michigan Based Developer</p>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form" netlify>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <div class="logo">Marcia<span>Cripps</span></div>
+        <p>Web Developer based in San Francisco, specializing in backend development and data analysis.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <a href="#home">Home</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h3>Social</h3>
+          <a href="https://github.com/marciacripps" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/marciacripps" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:marciacripps@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Marcia Cripps. All rights reserved.</p>
+    </div>
+  </footer>
 
-	</body>
+  <script src="script.js"></script>
+</body>
 </html>
