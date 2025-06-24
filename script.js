@@ -32,10 +32,10 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // Contact Form
-const contactForm = document.getElementById('contact');
+const contactForm = document.getElementById('contact-form');
 
 document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('contact');
+  const form = document.getElementById('contact-form');
   
   if (form) {
     form.addEventListener('submit', function(e) {
