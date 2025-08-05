@@ -1,0 +1,16 @@
+[build]
+  publish = "."
+  command = ""
+
+# Use Ubuntu Jammy (22.04) instead of Focal (20.04) to avoid deprecation
+[build.environment]
+  NODE_VERSION = "18"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin" 
