@@ -3,6 +3,7 @@
   command = ""
 
 # Use Ubuntu Noble (24.04) instead of Focal (20.04) to avoid deprecation
+# Updated: 2024-08-05 to fix deprecation warnings
 [build.environment]
   NODE_VERSION = "22"
 
