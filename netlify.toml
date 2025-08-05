@@ -2,9 +2,9 @@
   publish = "."
   command = ""
 
-# Use Ubuntu Jammy (22.04) instead of Focal (20.04) to avoid deprecation
+# Use Ubuntu Noble (24.04) instead of Focal (20.04) to avoid deprecation
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "22"
 
 # Security headers
 [[headers]]
