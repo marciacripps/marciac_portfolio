@@ -349,8 +349,9 @@ section {
   background: var(--background);
 }
 
-/* Alternate backgrounds on skills and contact sections */
-#skills,
+/* Alternate backgrounds on expertise, speaking, and contact sections */
+#expertise,
+#speaking,
 #contact {
   background: var(--background-alt);
 }
@@ -516,6 +517,134 @@ section h2::after {
   font-size: 0.9rem;
 }
 
+/* ---- Speaking & Podcasts Section ---- */
+.speaking-intro {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.speaking-intro p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.speaking-cta {
+  margin-top: 1.5rem;
+}
+
+.speaking-cta a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid var(--primary-pale);
+  transition: border-color 0.3s;
+}
+
+.speaking-cta a:hover {
+  border-color: var(--primary);
+}
+
+.speaking-subheading {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.podcast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+
+.podcast-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 3px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  position: relative;
+}
+
+.podcast-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-pale), transparent);
+}
+
+.podcast-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px var(--shadow);
+  border-color: var(--primary-pale);
+}
+
+.podcast-icon {
+  color: var(--primary);
+  flex-shrink: 0;
+  padding-top: 0.15rem;
+}
+
+.podcast-info h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.podcast-episode {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.podcast-date {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.speaking-topics {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.topics-list {
+  list-style-type: none;
+  margin-left: 1rem;
+  columns: 1;
+}
+
+.topics-list li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 0.25rem;
+  color: var(--text);
+}
+
+.topics-list li::before {
+  content: "\2727";
+  color: var(--primary-pale);
+  position: absolute;
+  left: -1.25rem;
+  font-size: 0.85rem;
+}
+
 /* ---- About Section ---- */
 .about-content {
   max-width: 1100px;
@@ -591,13 +720,26 @@ section h2::after {
 
 .contact-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
   color: var(--text);
 }
 
 .contact-item i {
   color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.contact-item p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact-item strong {
+  color: var(--primary);
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
 }
 
 .contact-form {
@@ -625,7 +767,8 @@ section h2::after {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
   padding: 0.75rem;
   border: 1px solid var(--border);
   border-radius: 2px;
@@ -636,8 +779,18 @@ section h2::after {
   transition: border-color 0.3s;
 }
 
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b625a' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
   outline: none;
   border-color: var(--primary-pale);
 }
@@ -864,6 +1017,10 @@ section.fade-in {
   }
 
   .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .podcast-grid {
     grid-template-columns: 1fr;
   }
 }
