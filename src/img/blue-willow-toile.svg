@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="520" viewBox="0 0 280 520">
+  <g fill="none" stroke="#1e3a5f" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Decorative top border wave -->
+    <path d="M0 12 Q35 6 70 12 Q105 18 140 12 Q175 6 210 12 Q245 18 280 12" stroke-width="0.6" opacity="0.4"/>
+    <path d="M0 8 Q35 2 70 8 Q105 14 140 8 Q175 2 210 8 Q245 14 280 8" stroke-width="0.3" opacity="0.25"/>
+
+    <!-- ======= Willow Tree ======= -->
+    <!-- Trunk -->
+    <path d="M140 35 Q138 70 139 110 Q140 150 140 190 Q141 220 140 260" stroke-width="3"/>
+    <path d="M137 100 Q136 140 137 180" stroke-width="1" opacity="0.3"/>
+
+    <!-- Main branches -->
+    <path d="M140 60 Q158 48 178 52 Q192 56 198 66" stroke-width="2"/>
+    <path d="M140 60 Q122 48 102 52 Q88 56 82 66" stroke-width="2"/>
+    <path d="M140 85 Q162 76 185 82" stroke-width="1.5"/>
+    <path d="M140 85 Q118 76 95 82" stroke-width="1.5"/>
+    <path d="M140 110 Q155 105 170 108" stroke-width="1"/>
+    <path d="M140 110 Q125 105 110 108" stroke-width="1"/>
+
+    <!-- Drooping willow fronds - right side -->
+    <path d="M198 66 Q205 90 200 120 Q196 140 192 155" stroke-width="0.8"/>
+    <path d="M194 62 Q202 88 200 118 Q197 138 194 150" stroke-width="0.5"/>
+    <path d="M185 82 Q195 100 193 125 Q190 142 186 152" stroke-width="0.7"/>
+    <path d="M180 78 Q190 96 188 120 Q186 135 182 148" stroke-width="0.4"/>
+    <path d="M170 108 Q178 120 176 140 Q174 150 172 158" stroke-width="0.5"/>
+    <path d="M175 55 Q188 72 186 100 Q184 118 180 130" stroke-width="0.5"/>
+    <path d="M165 52 Q178 68 176 92 Q174 108 170 118" stroke-width="0.4"/>
+
+    <!-- Drooping willow fronds - left side -->
+    <path d="M82 66 Q75 90 80 120 Q84 140 88 155" stroke-width="0.8"/>
+    <path d="M86 62 Q78 88 80 118 Q83 138 86 150" stroke-width="0.5"/>
+    <path d="M95 82 Q85 100 87 125 Q90 142 94 152" stroke-width="0.7"/>
+    <path d="M100 78 Q90 96 92 120 Q94 135 98 148" stroke-width="0.4"/>
+    <path d="M110 108 Q102 120 104 140 Q106 150 108 158" stroke-width="0.5"/>
+    <path d="M105 55 Q92 72 94 100 Q96 118 100 130" stroke-width="0.5"/>
+    <path d="M115 52 Q102 68 104 92 Q106 108 110 118" stroke-width="0.4"/>
+
+    <!-- Small leaf tips on fronds -->
+    <path d="M192 155 Q190 158 194 160" stroke-width="0.4" fill="#1e3a5f" opacity="0.15"/>
+    <path d="M88 155 Q90 158 86 160" stroke-width="0.4" fill="#1e3a5f" opacity="0.15"/>
+    <path d="M186 152 Q184 155 188 157" stroke-width="0.3" fill="#1e3a5f" opacity="0.12"/>
+    <path d="M94 152 Q96 155 92 157" stroke-width="0.3" fill="#1e3a5f" opacity="0.12"/>
+
+    <!-- Tree roots / ground at base -->
+    <path d="M140 260 Q135 265 128 268" stroke-width="1.5"/>
+    <path d="M140 260 Q145 265 152 268" stroke-width="1.5"/>
+    <path d="M100 270 Q120 266 140 268 Q160 266 180 270" stroke-width="0.6"/>
+
+    <!-- ======= Horse ======= -->
+    <!-- Body outline -->
+    <path d="M98 360 Q98 342 108 332 Q118 322 132 318 Q148 315 164 320 Q174 325 180 336 Q184 346 184 360" stroke-width="1.5"/>
+    <!-- Back -->
+    <path d="M108 332 Q125 324 145 322 Q162 320 178 335" stroke-width="1.2"/>
+    <!-- Belly -->
+    <path d="M104 360 Q125 368 145 368 Q165 368 180 360" stroke-width="0.8"/>
+
+    <!-- Neck -->
+    <path d="M108 332 Q102 320 98 305 Q95 292 97 280" stroke-width="1.5"/>
+    <path d="M118 328 Q112 316 110 305 Q108 296 110 290" stroke-width="0.8"/>
+
+    <!-- Head -->
+    <path d="M97 280 Q92 274 90 268 Q88 262 90 256 Q94 248 100 248 Q108 248 112 254 Q114 260 112 266 Q110 274 110 290" stroke-width="1.3"/>
+    <!-- Nostril -->
+    <path d="M92 264 Q94 262 93 260" stroke-width="0.5"/>
+    <!-- Eye -->
+    <ellipse cx="100" cy="258" rx="1.8" ry="1.5" fill="#1e3a5f" opacity="0.5"/>
+    <!-- Ear -->
+    <path d="M98 248 Q96 238 98 234 Q100 238 103 248" stroke-width="0.8"/>
+    <path d="M104 248 Q103 240 105 237 Q106 241 107 249" stroke-width="0.6"/>
+
+    <!-- Mane -->
+    <path d="M102 250 Q108 268 112 285 Q114 298 112 310" stroke-width="0.8"/>
+    <path d="M100 252 Q105 265 108 278 Q110 290 108 302" stroke-width="0.5"/>
+    <path d="M104 250 Q110 262 114 275 Q116 285 114 295" stroke-width="0.4"/>
+
+    <!-- Front legs -->
+    <path d="M110 360 L108 380 Q107 390 106 400" stroke-width="1.2"/>
+    <path d="M120 362 L118 382 Q117 392 116 400" stroke-width="1.2"/>
+    <!-- Front hooves -->
+    <path d="M104 400 L108 400" stroke-width="1.8"/>
+    <path d="M114 400 L118 400" stroke-width="1.8"/>
+
+    <!-- Back legs -->
+    <path d="M162 362 L164 380 Q165 392 166 400" stroke-width="1.2"/>
+    <path d="M174 358 Q176 370 178 382 Q179 392 178 400" stroke-width="1.2"/>
+    <!-- Hock detail -->
+    <path d="M174 370 Q177 374 176 378" stroke-width="0.6"/>
+    <!-- Back hooves -->
+    <path d="M164 400 L168 400" stroke-width="1.8"/>
+    <path d="M176 400 L180 400" stroke-width="1.8"/>
+
+    <!-- Tail -->
+    <path d="M184 336 Q192 340 196 355 Q198 370 194 388" stroke-width="1"/>
+    <path d="M184 340 Q190 346 193 360 Q195 375 192 390" stroke-width="0.6"/>
+    <path d="M184 344 Q188 352 190 365 Q192 378 190 392" stroke-width="0.4"/>
+
+    <!-- ======= Ground & Landscape ======= -->
+    <path d="M20 405 Q70 400 140 403 Q210 400 260 405" stroke-width="0.8"/>
+
+    <!-- Grass tufts -->
+    <path d="M55 405 Q53 396 57 392" stroke-width="0.5"/>
+    <path d="M60 404 Q62 395 58 391" stroke-width="0.4"/>
+    <path d="M65 404 Q63 397 67 393" stroke-width="0.4"/>
+    <path d="M210 404 Q208 396 212 392" stroke-width="0.5"/>
+    <path d="M215 403 Q217 395 213 391" stroke-width="0.4"/>
+    <path d="M220 404 Q218 397 222 393" stroke-width="0.4"/>
+
+    <!-- Fence posts - left -->
+    <path d="M15 370 L15 405" stroke-width="0.8"/>
+    <path d="M35 368 L35 404" stroke-width="0.8"/>
+    <path d="M15 378 L35 376" stroke-width="0.5"/>
+    <path d="M15 388 L35 386" stroke-width="0.5"/>
+
+    <!-- Fence posts - right -->
+    <path d="M245 372 L245 405" stroke-width="0.8"/>
+    <path d="M265 370 L265 404" stroke-width="0.8"/>
+    <path d="M245 380 L265 378" stroke-width="0.5"/>
+    <path d="M245 390 L265 388" stroke-width="0.5"/>
+
+    <!-- ======= Flowers & Botanicals ======= -->
+    <!-- Flower cluster - left -->
+    <circle cx="45" cy="435" r="5" stroke-width="0.5"/>
+    <circle cx="45" cy="435" r="2" fill="#1e3a5f" opacity="0.15"/>
+    <path d="M40 435 Q36 432 33 435 Q36 438 40 435" stroke-width="0.4" fill="#1e3a5f" opacity="0.08"/>
+    <path d="M50 435 Q54 432 57 435 Q54 438 50 435" stroke-width="0.4" fill="#1e3a5f" opacity="0.08"/>
+    <path d="M45 430 Q42 427 45 424 Q48 427 45 430" stroke-width="0.4" fill="#1e3a5f" opacity="0.08"/>
+    <path d="M45 440 Q42 443 45 446 Q48 443 45 440" stroke-width="0.4" fill="#1e3a5f" opacity="0.08"/>
+    <path d="M45 446 L45 475" stroke-width="0.5"/>
+    <path d="M43 460 Q38 454 34 448" stroke-width="0.4"/>
+    <path d="M47 460 Q52 454 56 448" stroke-width="0.4"/>
+    <!-- Small leaves on stem -->
+    <path d="M43 465 Q38 462 36 458" stroke-width="0.3"/>
+    <path d="M47 470 Q52 467 54 463" stroke-width="0.3"/>
+
+    <!-- Flower cluster - right -->
+    <circle cx="235" cy="440" r="5" stroke-width="0.5"/>
+    <circle cx="235" cy="440" r="2" fill="#1e3a5f" opacity="0.15"/>
+    <path d="M230 440 Q226 437 223 440 Q226 443 230 440" stroke-width="0.4" fill="#1e3a5f" opacity="0.08"/>
+    <path d="M240 440 Q244 437 247 440 Q244 443 240 440" stroke-width="0.4" fill="#1e3a5f" opacity="0.08"/>
+    <path d="M235 435 Q232 432 235 429 Q238 432 235 435" stroke-width="0.4" fill="#1e3a5f" opacity="0.08"/>
+    <path d="M235 445 Q232 448 235 451 Q238 448 235 445" stroke-width="0.4" fill="#1e3a5f" opacity="0.08"/>
+    <path d="M235 451 L235 480" stroke-width="0.5"/>
+    <path d="M233 465 Q228 459 224 453" stroke-width="0.4"/>
+    <path d="M237 465 Q242 459 246 453" stroke-width="0.4"/>
+    <path d="M233 470 Q228 467 226 463" stroke-width="0.3"/>
+    <path d="M237 475 Q242 472 244 468" stroke-width="0.3"/>
+
+    <!-- Small butterflies -->
+    <path d="M50 300 Q46 295 48 290 Q52 295 50 300 Q48 305 46 310 Q50 305 50 300" stroke-width="0.4" fill="#1e3a5f" opacity="0.06"/>
+    <path d="M230 295 Q234 290 232 285 Q228 290 230 295 Q232 300 234 305 Q230 300 230 295" stroke-width="0.4" fill="#1e3a5f" opacity="0.06"/>
+
+    <!-- Decorative bottom border wave -->
+    <path d="M0 505 Q35 499 70 505 Q105 511 140 505 Q175 499 210 505 Q245 511 280 505" stroke-width="0.6" opacity="0.4"/>
+    <path d="M0 509 Q35 515 70 509 Q105 503 140 509 Q175 515 210 509 Q245 503 280 509" stroke-width="0.3" opacity="0.25"/>
+
+  </g>
+</svg>
