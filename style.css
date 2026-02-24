@@ -969,7 +969,9 @@ section.fade-in {
 
 @media (max-width: 768px) {
   .toile-border {
-    display: none;
+    width: 45px;
+    opacity: 0.3;
+    background-size: 200px auto;
   }
 
   .nav-links {
@@ -1075,6 +1077,12 @@ section.fade-in {
 }
 
 @media (max-width: 480px) {
+  .toile-border {
+    width: 30px;
+    opacity: 0.28;
+    background-size: 160px auto;
+  }
+
   .hero h1 {
     font-size: 2rem;
   }
