@@ -67,13 +67,13 @@ body.dark {
   top: 0;
   bottom: 0;
   width: 110px;
-  z-index: 0;
+  z-index: 100;
   pointer-events: none;
   background-image: url('src/img/horse_bluewillow.jpg');
   background-size: 320px auto;
   background-repeat: repeat-y;
   background-position: center top;
-  opacity: 0.25;
+  opacity: 0.35;
 }
 
 .toile-border-left {
@@ -89,7 +89,7 @@ body.dark {
 }
 
 .dark .toile-border {
-  opacity: 0.12;
+  opacity: 0.2;
   filter: brightness(1.8);
 }
 
@@ -963,7 +963,7 @@ section.fade-in {
 @media (max-width: 1200px) {
   .toile-border {
     width: 70px;
-    opacity: 0.18;
+    opacity: 0.28;
   }
 }
 
