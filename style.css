@@ -904,7 +904,8 @@ footer .logo span {
 }
 
 /* ---- Fade-in Animation ---- */
-section:not(#home) {
+/* .fade-ready is added by JS so content is visible even if JS fails */
+section.fade-ready {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
