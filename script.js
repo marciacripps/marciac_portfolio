@@ -84,7 +84,9 @@ const observer = new IntersectionObserver(
 );
 
 // Observe all sections except hero
+// Add fade-ready via JS so content stays visible if JS fails to load
 document.querySelectorAll('section:not(#home)').forEach(section => {
+  section.classList.add('fade-ready');
   observer.observe(section);
 });
 
