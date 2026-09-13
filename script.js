@@ -79,24 +79,98 @@ if (statsStrip) {
   statsObserver.observe(statsStrip);
 }
 
-// Subtle chapter-card parallax
+// Chapter cards — hiartem-style 3D tilt, group parallax, responsive collapse
 const chapterCards = document.getElementById('chapter-cards');
-if (chapterCards && !prefersReducedMotion.matches) {
-  const cards = chapterCards.querySelectorAll('.chapter-card');
-  chapterCards.addEventListener('pointermove', (e) => {
-    const rect = chapterCards.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    cards.forEach((card, i) => {
-      const depth = (i - 1) * 8;
-      card.style.translate = `${x * depth}px ${y * depth}px`;
+if (chapterCards) {
+  const cards = [...chapterCards.querySelectorAll('.chapter-card')];
+  const desktopQuery = window.matchMedia('(min-width: 901px)');
+  const midQuery = window.matchMedia('(min-width: 1101px)');
+
+  const syncLayoutMode = () => {
+    const mode = desktopQuery.matches
+      ? (midQuery.matches ? 'desktop' : 'compact')
+      : 'stack';
+    chapterCards.dataset.layout = mode;
+    document.documentElement.dataset.chapterLayout = mode;
+    cards.forEach((card) => {
+      card.classList.remove('is-tilting');
+      card.style.setProperty('--rx', '0deg');
+      card.style.setProperty('--ry', '0deg');
+      card.style.setProperty('--lift', '0px');
+      card.style.setProperty('--tx', '0px');
+      card.style.setProperty('--ty', '0px');
     });
-  });
-  chapterCards.addEventListener('pointerleave', () => {
-    cards.forEach(card => {
-      card.style.translate = '0px 0px';
+  };
+
+  const canTilt = () => desktopQuery.matches && !prefersReducedMotion.matches;
+
+  const resetCard = (card) => {
+    card.classList.remove('is-tilting');
+    card.style.setProperty('--rx', '0deg');
+    card.style.setProperty('--ry', '0deg');
+    card.style.setProperty('--lift', '0px');
+    card.style.setProperty('--tx', '0px');
+    card.style.setProperty('--ty', '0px');
+  };
+
+  if (!prefersReducedMotion.matches) {
+    cards.forEach((card) => {
+      card.addEventListener('pointerenter', () => {
+        if (!canTilt()) return;
+        card.classList.add('is-tilting');
+      });
+
+      card.addEventListener('pointermove', (e) => {
+        if (!canTilt()) return;
+        const rect = card.getBoundingClientRect();
+        const px = (e.clientX - rect.left) / rect.width;
+        const py = (e.clientY - rect.top) / rect.height;
+        const ry = (px - 0.5) * 16;
+        const rx = (0.5 - py) * 12;
+        card.style.setProperty('--rx', `${rx.toFixed(2)}deg`);
+        card.style.setProperty('--ry', `${ry.toFixed(2)}deg`);
+        card.style.setProperty('--lift', '-10px');
+      });
+
+      card.addEventListener('pointerleave', () => {
+        resetCard(card);
+      });
     });
+
+    chapterCards.addEventListener('pointermove', (e) => {
+      if (!canTilt()) return;
+      const rect = chapterCards.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      cards.forEach((card, i) => {
+        if (card.classList.contains('is-tilting')) return;
+        const depth = (i - 1) * 14;
+        card.style.setProperty('--tx', `${(x * depth).toFixed(1)}px`);
+        card.style.setProperty('--ty', `${(y * depth * 0.65).toFixed(1)}px`);
+      });
+    });
+
+    chapterCards.addEventListener('pointerleave', () => {
+      cards.forEach(resetCard);
+    });
+  }
+
+  const onBreakpointChange = () => syncLayoutMode();
+  if (typeof desktopQuery.addEventListener === 'function') {
+    desktopQuery.addEventListener('change', onBreakpointChange);
+    midQuery.addEventListener('change', onBreakpointChange);
+  } else {
+    desktopQuery.addListener(onBreakpointChange);
+    midQuery.addListener(onBreakpointChange);
+  }
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(syncLayoutMode, 80);
   });
+
+  syncLayoutMode();
 }
 
 // Smooth scrolling
