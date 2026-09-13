@@ -275,8 +275,27 @@ main {
   }
 
   .chapter-label {
-    font-size: 2.35rem;
-    padding: 1.35rem 1.45rem 1.15rem;
+    font-size: 2.5rem;
+    padding: 1.45rem 1.55rem 1.25rem;
+  }
+
+  .chapter-cards {
+    min-height: 520px;
+    padding: 2rem 0 1.75rem;
+  }
+
+  .chapter-card {
+    width: min(420px, 29vw);
+    height: min(500px, 36vw);
+    margin: 0 -3.25rem;
+  }
+
+  .chapter-story {
+    min-height: 280px;
+  }
+
+  .chapter-life img {
+    min-height: 240px;
   }
 
   .chapter-stage {
@@ -448,10 +467,10 @@ main {
   justify-content: center;
   align-items: center;
   gap: 0;
-  width: min(1100px, 96vw);
-  min-height: clamp(340px, 38vw, 440px);
+  width: min(1280px, 98vw);
+  min-height: clamp(400px, 44vw, 520px);
   margin: 0 auto;
-  padding: 1.5rem 0 1.25rem;
+  padding: 1.75rem 0 1.5rem;
   flex-shrink: 0;
   perspective: 1400px;
   transition: min-height 0.35s ease, gap 0.35s ease, padding 0.35s ease;
@@ -460,9 +479,9 @@ main {
 .chapter-card {
   position: relative;
   flex: 0 0 auto;
-  width: clamp(270px, 24vw, 340px);
-  height: clamp(320px, 28vw, 400px);
-  margin: 0 clamp(-2.6rem, -2.2vw, -1.4rem);
+  width: clamp(320px, 28vw, 420px);
+  height: clamp(380px, 34vw, 500px);
+  margin: 0 clamp(-3.2rem, -2.8vw, -1.8rem);
   background: rgba(253, 251, 248, 0.92);
   backdrop-filter: blur(14px);
   border: 1px solid rgba(200, 191, 176, 0.7);
@@ -1452,14 +1471,14 @@ section.fade-in,
   }
 
   .chapter-cards {
-    width: min(920px, 94vw);
-    min-height: 320px;
+    width: min(1080px, 96vw);
+    min-height: 380px;
   }
 
   .chapter-card {
-    width: clamp(240px, 26vw, 300px);
-    height: clamp(290px, 30vw, 350px);
-    margin: 0 -1.5rem;
+    width: clamp(280px, 27vw, 340px);
+    height: clamp(330px, 32vw, 400px);
+    margin: 0 -1.8rem;
   }
 
   .card-help { --base-rot: 2deg; }
