@@ -1,110 +1,119 @@
-// Theme Toggle
-const themeToggle = document.getElementById('theme-toggle');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-function setTheme(isDark) {
-  document.body.classList.toggle('dark', isDark);
-  themeToggle.textContent = isDark ? '☀️' : '🌙';
-  localStorage.setItem('darkMode', isDark);
-}
-
-// Initialize theme
-const savedTheme = localStorage.getItem('darkMode');
-setTheme(savedTheme !== null ? JSON.parse(savedTheme) : prefersDark.matches);
-
-themeToggle.addEventListener('click', () => {
-  setTheme(!document.body.classList.contains('dark'));
-});
-
-// Mobile Menu
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-mobileMenu.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-  });
-});
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 // Contact Form
-const contactForm = document.getElementById('contact-form');
-
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('contact-form');
-  
   if (form) {
-    form.addEventListener('submit', function(e) {
-      console.log('Form submission started');
-      
-      // Log form data
+    form.addEventListener('submit', function() {
       const formData = new FormData(form);
       const formDataObj = {};
       formData.forEach((value, key) => {
         formDataObj[key] = value;
       });
       console.log('Form data to be submitted:', formDataObj);
-      
-      // Check if form-name is present
-      if (!formDataObj['form-name']) {
-        console.error('form-name is missing from form data');
-      }
-      
-      // Check if Netlify form detection is working
-      if (!form.hasAttribute('data-netlify')) {
-        console.error('data-netlify attribute is missing');
-      }
-      
-      // Log the form's action URL
-      console.log('Form action URL:', form.action);
-      
-      // Log the form's method
-      console.log('Form method:', form.method);
     });
-  } else {
-    console.error('Contact form not found in the document');
   }
 });
 
-// Intersection Observer for animations
-const observer = new IntersectionObserver(
+// Scroll-earned section reveals
+const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('fade-in');
-        observer.unobserve(entry.target);
+        revealObserver.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.1 }
+  { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
 );
 
-// Observe all sections except hero
-// Add fade-ready via JS so content stays visible if JS fails to load
-document.querySelectorAll('section:not(#home)').forEach(section => {
-  section.classList.add('fade-ready');
-  observer.observe(section);
+document.querySelectorAll('section:not(#home), .stats-chapter').forEach(el => {
+  if (prefersReducedMotion.matches) {
+    el.classList.add('fade-in');
+    return;
+  }
+  el.classList.add('fade-ready');
+  revealObserver.observe(el);
 });
 
-// Handle smooth scrolling for anchor links
+// Stats count-up
+function animateCount(el, target, duration = 1400) {
+  if (prefersReducedMotion.matches) {
+    el.textContent = target;
+    return;
+  }
+
+  const start = performance.now();
+
+  function frame(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(target * eased);
+    if (progress < 1) {
+      requestAnimationFrame(frame);
+    } else {
+      el.textContent = target;
+    }
+  }
+
+  requestAnimationFrame(frame);
+}
+
+const statsStrip = document.getElementById('stats-strip');
+if (statsStrip) {
+  const statNumbers = statsStrip.querySelectorAll('.stat-number');
+  const statsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        statNumbers.forEach((el, i) => {
+          const target = Number(el.dataset.target) || 0;
+          setTimeout(() => animateCount(el, target), i * 120);
+        });
+        statsObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.35 }
+  );
+  statsObserver.observe(statsStrip);
+}
+
+// Subtle chapter-card parallax
+const chapterCards = document.getElementById('chapter-cards');
+if (chapterCards && !prefersReducedMotion.matches) {
+  const cards = chapterCards.querySelectorAll('.chapter-card');
+  chapterCards.addEventListener('pointermove', (e) => {
+    const rect = chapterCards.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    cards.forEach((card, i) => {
+      const depth = (i - 1) * 8;
+      card.style.translate = `${x * depth}px ${y * depth}px`;
+    });
+  });
+  chapterCards.addEventListener('pointerleave', () => {
+    cards.forEach(card => {
+      card.style.translate = '0px 0px';
+    });
+  });
+}
+
+// Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
-    
+
     const targetId = this.getAttribute('href').slice(1);
     const targetElement = document.getElementById(targetId);
-    
+
     if (targetElement) {
-      const headerHeight = document.querySelector('header').offsetHeight;
+      const headerHeight = document.querySelector('.site-header').offsetHeight;
       const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-      
+
       window.scrollTo({
         top: targetPosition,
-        behavior: 'smooth'
+        behavior: prefersReducedMotion.matches ? 'auto' : 'smooth'
       });
     }
   });
